@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-end" style="margin-top: 20px;">
+      <div class="col-2" style="text-align: right;">
+        <form action="/logout" method="post">
+          <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      {{#new}}
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th><h1>{{Title}}</h1></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{DateTime}}</td>
+          </tr>
+          <tr>
+            <td><h5 style="text-align: justify;">{{Body}}</h5 ></td>
+          </tr>
+        </tbody>
+      </table>
+      {{/new}}
+    </div>
+  </div>
+</body>
+</html>
